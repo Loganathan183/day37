@@ -5,10 +5,9 @@ const path = require('path');
 const app = express();
 const PORT = 3002;
 
-// Folder where files will be stored
 const folderPath = path.join(__dirname, 'files');
 
-// Ensure the folder exists
+
 if (!fs.existsSync(folderPath)) {
     fs.mkdirSync(folderPath);
 }
@@ -16,7 +15,7 @@ if (!fs.existsSync(folderPath)) {
 // Helper function to get the current timestamp and format it
 function getCurrentTimestamp() {
     const currentTimestamp = new Date();
-    return currentTimestamp.toISOString().replace(/:/g, '-'); // Replace colons to avoid filename issues
+    return currentTimestamp.toISOString().replace(/:/g, '-');
 }
 
 // Endpoint to create a text file
