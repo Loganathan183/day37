@@ -1,1 +1,0 @@
-write an api endpoint to retreive that all text files in particular folder in index1.js
